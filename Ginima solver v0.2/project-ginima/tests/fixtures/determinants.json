@@ -1,0 +1,761 @@
+[
+  {
+    "id": "D01",
+    "name": "zero scalar",
+    "matrix": [
+      [
+        0
+      ]
+    ],
+    "expected": "0",
+    "derivation": "For order one the determinant is the single entry.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D02",
+    "name": "negative scalar",
+    "matrix": [
+      [
+        -7
+      ]
+    ],
+    "expected": "-7",
+    "derivation": "For order one the determinant is the single entry.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D03",
+    "name": "rational scalar",
+    "matrix": [
+      [
+        "3/5"
+      ]
+    ],
+    "expected": "3/5",
+    "derivation": "For order one the determinant is the single entry.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D04",
+    "name": "identity",
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "expected": "1",
+    "derivation": "1*1-0*0=1",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D05",
+    "name": "dense negative",
+    "matrix": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "expected": "-2",
+    "derivation": "1*4-2*3=-2",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D06",
+    "name": "zero pivot",
+    "matrix": [
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "expected": "-6",
+    "derivation": "0*4-2*3=-6",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D07",
+    "name": "negative entries",
+    "matrix": [
+      [
+        -2,
+        3
+      ],
+      [
+        4,
+        -5
+      ]
+    ],
+    "expected": "-2",
+    "derivation": "10-12=-2",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D08",
+    "name": "duplicate rows",
+    "matrix": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "expected": "0",
+    "derivation": "Equal rows imply determinant zero.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D09",
+    "name": "proportional rows",
+    "matrix": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "expected": "0",
+    "derivation": "6-6=0",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D10",
+    "name": "zero row",
+    "matrix": [
+      [
+        0,
+        0
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "expected": "0",
+    "derivation": "Zero row implies determinant zero.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D11",
+    "name": "rational diagonal",
+    "matrix": [
+      [
+        "1/2",
+        0
+      ],
+      [
+        0,
+        "2/3"
+      ]
+    ],
+    "expected": "1/3",
+    "derivation": "(1/2)*(2/3)=1/3",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D12",
+    "name": "rational dense",
+    "matrix": [
+      [
+        "1/2",
+        "1/3"
+      ],
+      [
+        "2/3",
+        "3/4"
+      ]
+    ],
+    "expected": "11/72",
+    "derivation": "3/8-2/9=11/72",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D13",
+    "name": "negative denominator",
+    "matrix": [
+      [
+        "1/-2",
+        0
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "expected": "-2",
+    "derivation": "(-1/2)*4=-2",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D14",
+    "name": "row swap",
+    "matrix": [
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "expected": "2",
+    "derivation": "3*2-4*1=2",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D15",
+    "name": "large exact",
+    "matrix": [
+      [
+        1000000000,
+        1
+      ],
+      [
+        1,
+        1000000000
+      ]
+    ],
+    "expected": "999999999999999999",
+    "derivation": "10^18-1",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D16",
+    "name": "row addition",
+    "matrix": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    "expected": "-2",
+    "derivation": "8-10=-2; second row is original [3,4]+2*[1,2].",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D17",
+    "name": "3x3 upper triangular",
+    "matrix": [
+      [
+        2,
+        1,
+        3
+      ],
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        0,
+        -3
+      ]
+    ],
+    "expected": "-24",
+    "derivation": "Diagonal product 2*4*(-3).",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D18",
+    "name": "3x3 lower triangular",
+    "matrix": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        3,
+        0
+      ],
+      [
+        4,
+        5,
+        4
+      ]
+    ],
+    "expected": "24",
+    "derivation": "Diagonal product 2*3*4.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D19",
+    "name": "3-cycle permutation",
+    "matrix": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "expected": "1",
+    "derivation": "Three-cycle has positive sign.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D20",
+    "name": "3x3 transposition",
+    "matrix": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "expected": "-1",
+    "derivation": "One swap of identity rows changes sign.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D21",
+    "name": "3x3 dense",
+    "matrix": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        5,
+        6,
+        0
+      ]
+    ],
+    "expected": "1",
+    "derivation": "First-row expansion: -24+40-15=1.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D22",
+    "name": "3x3 dependent",
+    "matrix": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        5,
+        7,
+        9
+      ]
+    ],
+    "expected": "0",
+    "derivation": "Third row is sum of first two.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D23",
+    "name": "4x4 triangular",
+    "matrix": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        5,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        7
+      ],
+      [
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "expected": "24",
+    "derivation": "Diagonal product 1*2*3*4.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D24",
+    "name": "4x4 block diagonal",
+    "matrix": [
+      [
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        3
+      ]
+    ],
+    "expected": "-10",
+    "derivation": "Block determinants -2 and 5; product -10.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D25",
+    "name": "4x4 duplicate columns",
+    "matrix": [
+      [
+        1,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        7,
+        8,
+        9
+      ],
+      [
+        1,
+        1,
+        0,
+        2
+      ]
+    ],
+    "expected": "0",
+    "derivation": "First and second columns are identical.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D26",
+    "name": "5x5 diagonal",
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    ],
+    "expected": "120",
+    "derivation": "Diagonal product 1*(-2)*3*(-4)*5.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D27",
+    "name": "5x5 rational diagonal",
+    "matrix": [
+      [
+        "1/2",
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        "2/3",
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        "3/4",
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        "4/5",
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        "5/6"
+      ]
+    ],
+    "expected": "1/6",
+    "derivation": "Telescoping product of diagonal entries.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D28",
+    "name": "6x6 diagonal",
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    ],
+    "expected": "720",
+    "derivation": "Diagonal product 6!=720.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D29",
+    "name": "6x6 reversal",
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": "-1",
+    "derivation": "Reversal has 15 inversions, hence sign -1.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  },
+  {
+    "id": "D30",
+    "name": "6x6 zero row",
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": "0",
+    "derivation": "Last row is zero.",
+    "source": "Original synthetic example; expected value derived from the stated identity, not a JEE PYQ"
+  }
+]
